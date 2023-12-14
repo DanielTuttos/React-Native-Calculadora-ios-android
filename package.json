@@ -6,7 +6,10 @@
     "android": "npm start & npx react-native run-android",
     "ios": "npm start & npx react-native run-ios",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "clean": "cd android && ./gradlew clean && cd .. && npx react-native run-android",
+    "release": "npx react-native build-android --mode=release",
+    "apkrelease": "cd android && ./gradlew assembleRelease && cd .."
   },
   "dependencies": {
     "react": "18.2.0",
